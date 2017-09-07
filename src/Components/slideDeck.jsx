@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Slide from './slide';
 import Heading from './heading';
 import SubHeading from './subheading';
