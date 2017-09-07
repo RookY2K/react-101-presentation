@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Slide from './slide';
 import Heading from './heading';
 import SubHeading from './subheading';
+import ComponentSlide from './Slides/Component';
 
 const SlideDeck = [
 	<Slide>
@@ -13,6 +14,9 @@ const SlideDeck = [
 	</Slide>,
 	<Slide>
 		<Heading>This is a good thing*</Heading>
+	</Slide>,
+	<Slide>
+		<ComponentSlide/>
 	</Slide>
 ];
 

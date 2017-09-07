@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SlideDeck from './slideDeck';
 
+
 export default class Presentation extends Component {
 	constructor() {
 		super();
@@ -11,33 +12,38 @@ export default class Presentation extends Component {
 		}
 	}
 
-	componentWillMount = () => {
-		document.addEventListener('keydown', this.handleKeyDown, false);
+	componentDidMount() {
+		document.addEventListener('keydown', this.handleKeyDown);
 	}
 
-	componentWillUnmount = () => {
-		document.removeEventListener('keydown', this.handleKeyDown, false);		
+	componentWillUnmount() {
+		document.removeEventListener('keydown', this.handleKeyDown);
 	}
 
 	render() {
 		const containerStyle = {
+
 			padding: '0 2% 0 2%',
 			textAlign: 'center'
 		}
 
 		return (
-			<div style={containerStyle}>
+			<div style={containerStyle} >
 				{this.slides[this.state.currentSlideIndex]}
 			</div>
 		);
 	}
 
 	handleKeyDown = (event) => {
-		const { currentSlideIndex } = this.state; 
-		if (event.key === 'ArrowRight' && currentSlideIndex < this.slides.length - 1) {
-			this.setState({ currentSlideIndex: currentSlideIndex + 1 });
-		} else if (event.key === 'ArrowLeft' && currentSlideIndex > 0) {
-			this.setState({ currentSlideIndex: currentSlideIndex - 1 });
-		}
+		const { currentSlideIndex } = this.state;
+
+		switch (event.key){
+            case 'ArrowRight':
+                this.setState({currentSlideIndex: Math.min(this.slides.length - 1, currentSlideIndex + 1)});
+                break;
+            case 'ArrowLeft':
+                this.setState({currentSlideIndex: Math.max(0, currentSlideIndex - 1)});
+                break;
+        }
 	}
 }
