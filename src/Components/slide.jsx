@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
-export default class Slide extends React.Component {
+export default class Slide extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { windowHeight: window.innerHeight }
 	}
-	componentDidMount = () => {
+
+	componentDidMount() {
 		document.addEventListener('resize', this.handleResize, false);
 	}
 
-	componentWillUnmount = () => {
+	componentWillUnmount() {
 		document.removeEventListener('resize', this.handleResize, false);		
 	}
 
@@ -18,7 +18,8 @@ export default class Slide extends React.Component {
 		const slideStyle = {
 			height: this.state.windowHeight + 'px',
 			width: '100%',
-		}
+		};
+
 		return <div style={slideStyle} className='flex-item'>
 			{this.props.children}
 		</div>;

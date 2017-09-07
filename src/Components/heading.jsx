@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class Heading extends React.Component {
+export default class Heading extends Component {
 	render() {
 		const headingStyle = {
 			fontSize: 100
