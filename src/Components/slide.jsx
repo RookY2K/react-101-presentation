@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Title from './title';
 
 export default class Slide extends React.Component {
-	static propTypes = {
-		title: PropTypes.string
+	constructor(props) {
+		super(props);
+		this.state = { windowHeight: window.innerHeight }
+	}
+	componentDidMount = () => {
+		document.addEventListener('resize', this.handleResize, false);
+	}
+
+	componentWillUnmount = () => {
+		document.removeEventListener('resize', this.handleResize, false);		
 	}
 
 	render() {
 		const slideStyle = {
-			width: '100%'
+			height: this.state.windowHeight + 'px',
+			width: '100%',
 		}
-		return <div style={slideStyle}>
-			<Title>{this.props.title}</Title>
+		return <div style={slideStyle} className='flex-item'>
 			{this.props.children}
 		</div>;
+	}
+
+	handleResize = () => {
+		this.setState({ windowHeight: window.innerHeight });
 	}
 }

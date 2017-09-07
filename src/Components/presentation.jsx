@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import Slide from './slide';
+import SlideDeck from './slideDeck';
 
 export default class Presentation extends Component {
 	constructor() {
 		super();
-		this.slides = [
-			<Slide title='The First Slide'/>,
-			<Slide title='Oh Look...A Second Slide'/>
-		];
+		this.slides = SlideDeck;
 		
 		this.state = {
 			currentSlideIndex: 0
@@ -24,7 +21,8 @@ export default class Presentation extends Component {
 
 	render() {
 		const containerStyle = {
-			width: '100%',
+			padding: '0 2% 0 2%',
+			textAlign: 'center'
 		}
 
 		return (
