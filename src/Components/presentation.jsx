@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SlideDeck from './slideDeck';
+import SlideDeck from './slidedeck';
 
 export default class Presentation extends Component {
 	constructor() {
