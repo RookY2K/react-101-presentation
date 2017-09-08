@@ -2,11 +2,8 @@ import React from 'react';
 import Slide from './slide';
 import Heading from './heading';
 import SubHeading from './subheading';
-<<<<<<< HEAD
 import CodeArea from './codearea';
-=======
 import ComponentSlide from './Slides/Component';
->>>>>>> 4eb74d61a60828e1a7d5245d582008f2c8214490
 
 const SlideDeck = [
 	/* BEGIN RYAN'S STUFF */
@@ -133,15 +130,87 @@ let presentationLogger = ErrorLogger.create({
 	</Slide>
 	,
 	<Slide>
-<<<<<<< HEAD
 		<Heading>Framework specific code</Heading>
 		<SubHeading>Which can be inflexible...</SubHeading>
-=======
-		<Heading>This is a good thing*</Heading>
-	</Slide>,
+	</Slide>
+	,
 	<Slide>
-		<ComponentSlide/>
->>>>>>> 4eb74d61a60828e1a7d5245d582008f2c8214490
+		<Heading>React is a library</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>The only problem it attempts to solve is the view itself</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Things React Doesn't Have</Heading>
+		<SubHeading>A built-in router</SubHeading>
+		<SubHeading>Custom objects and classes</SubHeading>
+		<SubHeading>A "special" HTTP/AJAX library</SubHeading>
+		<SubHeading>Its own unit testing framework</SubHeading>
+		<SubHeading>Custom array extensions, filtering tools, etc</SubHeading>
+		<SubHeading>Wrappers to access window, document, or other globals</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Things React Does Have</Heading>
+		<SubHeading>Tools to build User Interfaces</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>How do I do all of the other stuff?</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>JavaScript</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>All up-to-date modern browsers support all of ECMAScript 2015</Heading>
+		<SubHeading>For IE Support, Babel's a great choice</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Embrace web standards</Heading>
+		<SubHeading>And your developers get...</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Framework agnostic knowledge</Heading>
+		<SubHeading>Which can lead to...</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Framework agnostic code</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>How's this affect you?</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>React has a small API</Heading>
+		<SubHeading>Compared to the previously mentioned frameworks</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Major React-specific API concepts</Heading>
+		<SubHeading>Component "props" and "state"</SubHeading>
+		<SubHeading>JSX</SubHeading>
+		<SubHeading>Lifecycle functions</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Fast ramp-up time</Heading>
+		<SubHeading>(We've had great success with this at Direct Supply)</SubHeading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>How easy is it to throw something together in React?</Heading>
+	</Slide>
+	,
+	<Slide>
+		<Heading>Well...this ain't Powerpoint</Heading>
 	</Slide>
 ];
 
