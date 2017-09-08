@@ -149,17 +149,21 @@ let presentationLogger = ErrorLogger.create({
 	,
 	<Slide>
 		<Heading>Things React Doesn't Have</Heading>
-		<SubHeading>A built-in router</SubHeading>
-		<SubHeading>Custom objects and classes</SubHeading>
-		<SubHeading>A "special" HTTP/AJAX library</SubHeading>
-		<SubHeading>Its own unit testing framework</SubHeading>
-		<SubHeading>Custom array extensions, filtering tools, etc</SubHeading>
-		<SubHeading>Wrappers to access window, document, or other globals</SubHeading>
+		<BulletedList listItems={[
+			'A built-in router',
+			'Custom objects and classes',
+			'A "special" HTTP/AJAX library',
+			'Its own unit testing framework',
+			'Custom array extensions, filtering tools, etc',
+			'Wrappers to access window, document, or other globals'
+		]} />
 	</Slide>
 	,
 	<Slide>
 		<Heading>Things React Does Have</Heading>
-		<SubHeading>Tools to build User Interfaces</SubHeading>
+		<BulletedList listItems={[
+			'Tools to build User Interfaces',
+		]} />
 	</Slide>
 	,
 	<Slide>
@@ -200,9 +204,11 @@ let presentationLogger = ErrorLogger.create({
 	,
 	<Slide>
 		<Heading>Major React-specific API concepts</Heading>
-		<SubHeading>Component "props" and "state"</SubHeading>
-		<SubHeading>JSX</SubHeading>
-		<SubHeading>Lifecycle functions</SubHeading>
+		<BulletedList listItems={[
+			'Component "props" and "state"',
+			'JSX',
+			'Lifecycle functions'
+		]} />
 	</Slide>
 	,
 	<Slide>
@@ -214,9 +220,6 @@ let presentationLogger = ErrorLogger.create({
 		<Heading>How easy is it to throw something together in React?</Heading>
 	</Slide>
 	,
-	<Slide>
-		<Heading>Well...this ain't Powerpoint</Heading>
-	</Slide>,
 	/*Begin Vince Stuff */
 	<Slide>
 		<Heading>This isn't a Powerpoint slide</Heading>
