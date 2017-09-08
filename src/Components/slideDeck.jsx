@@ -2,11 +2,9 @@ import React from 'react';
 import Slide from './slide';
 import Heading from './heading';
 import SubHeading from './subheading';
-<<<<<<< HEAD
 import CodeArea from './codearea';
-=======
 import ComponentSlide from './Slides/Component';
->>>>>>> 4eb74d61a60828e1a7d5245d582008f2c8214490
+
 
 const SlideDeck = [
 	/* BEGIN RYAN'S STUFF */
@@ -133,15 +131,11 @@ let presentationLogger = ErrorLogger.create({
 	</Slide>
 	,
 	<Slide>
-<<<<<<< HEAD
 		<Heading>Framework specific code</Heading>
 		<SubHeading>Which can be inflexible...</SubHeading>
-=======
-		<Heading>This is a good thing*</Heading>
 	</Slide>,
 	<Slide>
 		<ComponentSlide/>
->>>>>>> 4eb74d61a60828e1a7d5245d582008f2c8214490
 	</Slide>
 ];
 
