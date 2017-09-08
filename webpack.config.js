@@ -26,7 +26,11 @@ module.exports = {
 			test: /\.tsx?$/,
 			loaders: ['react-hot-loader', 'babel-loader', 'ts-loader'],
 			include: path.join(__dirname, 'src')
-		}
+		},
+        {
+            test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+            loaders: ['file-loader']
+        }
 	]
   },
   resolve: {

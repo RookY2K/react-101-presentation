@@ -4,7 +4,11 @@ import Heading from './heading';
 import SubHeading from './subheading';
 import CodeArea from './codearea';
 import ComponentSlide from './Slides/Component';
-
+import LegoImage from '../Content/missing-pieces.jpg';
+import RiverImage from '../Content/tributaries.jpg';
+import CallbackImage from '../Content/callback.jpg';
+import LifeCycleImage from '../Content/life.jpg';
+import BulletedList from './Slides/BulletedList';
 
 const SlideDeck = [
 	/* BEGIN RYAN'S STUFF */
@@ -134,9 +138,123 @@ let presentationLogger = ErrorLogger.create({
 		<Heading>Framework specific code</Heading>
 		<SubHeading>Which can be inflexible...</SubHeading>
 	</Slide>,
+	/*Begin Vince Stuff */
 	<Slide>
+		<Heading>This isn't a Powerpoint slide</Heading>
+	</Slide>,
+	<Slide>
+		<Heading>Components</Heading>
+		<SubHeading>What are they?</SubHeading>
+	</Slide>,
+	<Slide>
+		<Heading>Components - What are they?</Heading>
+		<img src={LegoImage} />
+		<CodeArea>{
+`class Foo extends Component {
+    render() {
+        return (
+            <p>{this.getText}</p>
+        );
+    }
+
+    getText = () => 'Hello World';
+}`
+        }
+        </CodeArea>
+    </Slide>,
+    <Slide>
+		<Heading>Components - What are they?</Heading>
+        <ComponentSlide/>
+    </Slide>,
+    <Slide>
+        <Heading>Data Flow</Heading>
+        <SubHeading>How do components communicate?</SubHeading>
+    </Slide>,
+    <Slide>
+        <Heading>Data Flow</Heading>
+        <img src={RiverImage}/>
+    </Slide>,
+    <Slide>
+        <Heading>Data Flow - Props and State</Heading>
+        <CodeArea>{
+`class Foo extends Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+            aThing: 'Hello',
+            bThing: 'World'
+        };
+    }
+
+    render () {
+        return (
+            <ChildComponent
+                firstWord={this.state.aThing}
+                secondWord={this.state.bThing}
+                />
+        );
+    }
+}
+`
+        }</CodeArea>
+	</Slide>,
+	<Slide>
+		<Heading>Data Flow</Heading>
+		<ComponentSlide/>
+	</Slide>,
+	<Slide>
+		<Heading>Event Handling</Heading>
+		<SubHeading>AKA How do you tell tell your parent that something happened?</SubHeading>
+	</Slide>,
+	<Slide>
+		<Heading>Event Handling - Callbacks</Heading>
+		<img src={CallbackImage} />
+		<CodeArea>{
+`handleChange = (event) => {
+    this.setState ({
+        aThing: event.target.value
+    });
+}
+...
+<input
+    type='text'
+    value={this.state.aThing}
+    onChange={this.handleChange}
+    />
+`
+        }</CodeArea>
+	</Slide>,
+	<Slide>
+		<Heading>Event Handling</Heading>
+		<ComponentSlide/>
+	</Slide>,
+	<Slide>
+		<Heading>React Lifecycle</Heading>
+		<SubHeading>The birth, growth, and death of a component</SubHeading>
+		<img src={LifeCycleImage} />
+	</Slide>,
+	<Slide>
+		<Heading>React Lifecycle - API Hooks</Heading>
+		<BulletedList listItems={[
+			'componentWillMount()**',
+			'componentDidMount()*',
+			'componentWillReceiveProps(nextProps)*',
+			'componentShouldUpdate(nextProps, nextState)',
+			'componentWillUpdate(nextProps, nextState)',
+			'render()',
+			'componentDidUpdate(prevProps, prevState)*',
+			'componentWillUnmount()'
+		]}/>
+		<span>* - Can call setState</span>
+		<span>** - Can call setState, but don't do it</span>
+	</Slide>,
+	<Slide>
+		<Heading>React Lifecycle</Heading>
 		<ComponentSlide/>
 	</Slide>
+
+
 ];
 
 export default SlideDeck;
