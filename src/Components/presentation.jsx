@@ -6,9 +6,12 @@ export default class Presentation extends Component {
 	constructor() {
 		super();
 		this.slides = SlideDeck;
-		
+
+		let hashValue = window.location.hash.substring(1);
+		let pageNumber = Number(hashValue) || 0;
+
 		this.state = {
-			currentSlideIndex: 0
+			currentSlideIndex: pageNumber
 		}
 	}
 
@@ -48,10 +51,14 @@ export default class Presentation extends Component {
 
 		switch (event.key){
 			case 'ArrowRight':
-				this.setState({currentSlideIndex: Math.min(this.slides.length - 1, currentSlideIndex + 1)});
+				const nextSlideIndex = Math.min(this.slides.length - 1, currentSlideIndex + 1);
+				this.setState({currentSlideIndex: nextSlideIndex});
+				window.location.hash = nextSlideIndex;
 				break;
 			case 'ArrowLeft':
-				this.setState({currentSlideIndex: Math.max(0, currentSlideIndex - 1)});
+				const prevSlideIndex = Math.max(0, currentSlideIndex - 1);
+				this.setState({currentSlideIndex: prevSlideIndex});
+				window.location.hash = prevSlideIndex;				
 				break;
 		}
 	}
