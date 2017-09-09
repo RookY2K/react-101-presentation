@@ -10,6 +10,7 @@ import CallbackImage from '../Content/callback.jpg';
 import LifeCycleImage from '../Content/life.jpg';
 import BulletedList from './Slides/BulletedList';
 import VirtualDomImage from '../Content/virtualDom.png';
+import QuestionImage from '../Content/questions.gif';
 
 const SlideDeck = [
 	<Slide>
@@ -323,7 +324,7 @@ let presentationLogger = ErrorLogger.create({
 			'componentWillMount()**',
 			'componentDidMount()*',
 			'componentWillReceiveProps(nextProps)*',
-			'componentShouldUpdate(nextProps, nextState)',
+			'shouldComponentUpdate(nextProps, nextState)',
 			'componentWillUpdate(nextProps, nextState)',
 			'render()',
 			'componentDidUpdate(prevProps, prevState)*',
@@ -339,8 +340,11 @@ let presentationLogger = ErrorLogger.create({
 		<Heading>Virtual DOM</Heading>
 		<SubHeading>I.E. What makes React really good</SubHeading>
 		<img src={VirtualDomImage} />
+	</Slide>,
+	<Slide>
+		<Heading>Questions?</Heading>
+		<img src={QuestionImage} />
 	</Slide>
-
 ];
 
 export default SlideDeck;

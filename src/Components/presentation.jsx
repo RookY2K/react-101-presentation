@@ -27,7 +27,7 @@ export default class Presentation extends Component {
 		const containerStyle = {
 			padding: '0 2% 0 2%',
 			textAlign: 'center'
-		}
+		};
 
 		const { currentSlideIndex } = this.state;
 		
@@ -36,8 +36,7 @@ export default class Presentation extends Component {
 				<CSSTransitionGroup
 					transitionName="fade"
 					transitionEnterTimeout={500}
-					transitionLeaveTimeout={300}
-				>
+					transitionLeaveTimeout={300}>
 					<div key={currentSlideIndex}>
 						{this.slides[currentSlideIndex]}
 					</div>
@@ -58,7 +57,7 @@ export default class Presentation extends Component {
 			case 'ArrowLeft':
 				const prevSlideIndex = Math.max(0, currentSlideIndex - 1);
 				this.setState({currentSlideIndex: prevSlideIndex});
-				window.location.hash = prevSlideIndex;				
+				window.location.hash = prevSlideIndex;
 				break;
 		}
 	}
