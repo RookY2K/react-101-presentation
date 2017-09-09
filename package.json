@@ -34,6 +34,7 @@
     "webpack-hot-middleware": "^2.19.1"
   },
   "dependencies": {
+    "dom-helpers": "^3.2.1",
     "file-loader": "^0.11.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

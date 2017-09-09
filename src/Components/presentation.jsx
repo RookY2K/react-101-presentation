@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SlideDeck from './slidedeck';
+import SlideDeck from './slideDeck';
 import { CSSTransitionGroup } from 'react-transition-group';
 
 export default class Presentation extends Component {

@@ -9,8 +9,12 @@ import RiverImage from '../Content/tributaries.jpg';
 import CallbackImage from '../Content/callback.jpg';
 import LifeCycleImage from '../Content/life.jpg';
 import BulletedList from './Slides/BulletedList';
+import VirtualDomImage from '../Content/virtualDom.png';
 
 const SlideDeck = [
+	<Slide>
+		<Heading>Components of Good UI: Intro to ReactJS</Heading>
+	</Slide>,
 	/* BEGIN RYAN'S STUFF */
 	<Slide>
 		<Heading>What is React?</Heading>
@@ -245,7 +249,6 @@ let presentationLogger = ErrorLogger.create({
         </CodeArea>
     </Slide>,
     <Slide>
-		<Heading>Components - What are they?</Heading>
         <ComponentSlide/>
     </Slide>,
     <Slide>
@@ -282,7 +285,6 @@ let presentationLogger = ErrorLogger.create({
         }</CodeArea>
 	</Slide>,
 	<Slide>
-		<Heading>Data Flow</Heading>
 		<ComponentSlide/>
 	</Slide>,
 	<Slide>
@@ -308,7 +310,6 @@ let presentationLogger = ErrorLogger.create({
         }</CodeArea>
 	</Slide>,
 	<Slide>
-		<Heading>Event Handling</Heading>
 		<ComponentSlide/>
 	</Slide>,
 	<Slide>
@@ -332,10 +333,13 @@ let presentationLogger = ErrorLogger.create({
 		<span>** - Can call setState, but don't do it</span>
 	</Slide>,
 	<Slide>
-		<Heading>React Lifecycle</Heading>
 		<ComponentSlide/>
+	</Slide>,
+	<Slide>
+		<Heading>Virtual DOM</Heading>
+		<SubHeading>I.E. What makes React really good</SubHeading>
+		<img src={VirtualDomImage} />
 	</Slide>
-
 
 ];
 
