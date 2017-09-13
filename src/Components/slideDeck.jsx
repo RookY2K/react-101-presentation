@@ -130,6 +130,10 @@ let presentationLogger = ErrorLogger.create({
 	</Slide>
 	,
 	<Slide>
+		<Heading>Some of these features are no longer necessary!</Heading>
+	</Slide>
+	,
+	<Slide>
 		<Heading>"How do I do this in ${'{Framework}'}?"</Heading>
 		<SubHeading>And leaking abstractions...</SubHeading>
 	</Slide>

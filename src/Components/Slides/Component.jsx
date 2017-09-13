@@ -8,10 +8,10 @@ export default class ComponentSlide extends Component {
         this.state = {
             text: '',
             childText: ''
-        }
+        };
     }
 
-    shouldComponentUpdate (nextProps, nextState) {
+    shouldComponentUpdate(nextProps, nextState) {
         if(this.state.text.includes('STOP')) {
             return !nextState.text.includes('STOP');
         }
@@ -23,7 +23,7 @@ export default class ComponentSlide extends Component {
         return (
             <div>
                 <textarea
-                    rows="10"
+                    rows="5"
                     cols="50"
                     value={this.state.text}
                     onChange={this.handleChange}
@@ -37,8 +37,8 @@ export default class ComponentSlide extends Component {
     handleChange = (event) => {
         this.setState({
             text: event.target.value
-        });
-    };
+        })
+    }
 
     handleKeyDown = (event) => {
         if(event.key !== 'Enter') return;
